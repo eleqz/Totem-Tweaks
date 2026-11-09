@@ -46,7 +46,7 @@ public class TotemTweaks implements ModInitializer {
 
 	public static void simulatePop() {
 		if (Minecraft.getInstance().player != null) {
-			Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(Items.TOTEM_OF_UNDYING));
+			Minecraft.getInstance().player.displayItemActivation(new ItemStack(Items.TOTEM_OF_UNDYING));
 		}
 	}
 }
