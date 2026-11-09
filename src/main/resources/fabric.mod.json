@@ -1,9 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "totemtweaks",
+  "id": "${id}",
   "version": "${version}",
-
-  "name": "Totem Tweaks",
+  "name": "${name}",
   "description": "Changeable totem sizes and extensive customizability of the pop animation.",
   "authors": [
     "Pathdos"
@@ -13,29 +12,26 @@
     "issues": "https://github.com/eleqz/Totem-Tweaks/issues",
     "sources": "https://github.com/eleqz/Totem-Tweaks"
   },
-
   "license": "ARR",
   "icon": "assets/totemtweaks/icon.png",
-
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.pathdos.totemtweaks.TotemTweaks"
-    ],
-    "modmenu": [
-      "net.pathdos.totemtweaks.config.ModMenu"
-    ]
+    "modmenu": ["net.pathdos.totemtweaks.loader.fabric.ModMenuIntegration"],
+    "client": ["net.pathdos.totemtweaks.loader.fabric.TotemTweaksFabric"]
   },
   "mixins": [
     "totemtweaks.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.16.0",
-    "fabric-api": "*",
-    "modmenu": "*",
+    "fabricloader": ">=${loader}",
+    "minecraft": "${minecraft}",
+    "${fabric_api}": "*"
+  },
+  "recommends": {
+    "yet_another_config_lib_v3": "*"
+  },
+  "suggests": {
     "cloth-config": "*",
-    "minecraft": "~26.1",
-    "java": ">=21"
+    "modmenu": "*"
   }
 }

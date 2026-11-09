@@ -1,0 +1,46 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "All Rights Reserved"
+issueTrackerURL = "https://github.com/eleqz/Totem-Tweaks/issues"
+
+[[mods]]
+modId = "${id}"
+version = "${version}"
+displayName = "${name}"
+description = "Changeable totem sizes and extensive customizability of the pop animation."
+authors = "Pathdos"
+logoFile = "assets/totemtweaks/icon.png"
+iconFile = "assets/totemtweaks/icon.png"
+displayURL = "https://modrinth.com/mod/cpvp"
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "totemtweaks.mixins.json"
+
+[[dependencies.${id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge},)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${id}]]
+modId = "yet_another_config_lib_v3"
+type = "optional"
+versionRange = "[3,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${id}]]
+modId = "cloth_config"
+type = "optional"
+versionRange = "[13,)"
+ordering = "NONE"
+side = "CLIENT"

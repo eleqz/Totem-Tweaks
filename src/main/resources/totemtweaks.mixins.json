@@ -1,13 +1,13 @@
 {
   "required": true,
+  "minVersion": "0.8",
   "package": "net.pathdos.totemtweaks.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
-    "ScreenEffectRendererMixin",
-    "ItemInHandRendererMixin"
+  "client": [
+    "HeldTotemMixin",
+    "TotemPopMixin",
+    "TotemPopRenderMixin"
   ],
-  "client": [],
-  "server": [],
   "injectors": {
     "defaultRequire": 1
   }
